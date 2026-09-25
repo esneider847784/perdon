@@ -1,70 +1,54 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para ti ❤️</title>
-    <link rel="stylesheet" href="style.css">
 
+    <title>Una disculpa ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="corazones"></div>
+    <div class="corazones">❤️ 💕 ❤️ 💕 ❤️</div>
 
-    <main class="contenedor">
+    <main class="carta">
 
-        <div class="carta">
+        <h1>Para ti ❤️</h1>
 
-            <div class="corazon">💕</div>
+        <p class="mensaje">
+            Sé que quizás hice algo que te lastimó y quiero pedirte
+            perdón de corazón.
+        </p>
 
-            <h1>Perdóname</h1>
+        <p class="mensaje">
+            No quiero justificarme. Solo quiero que sepas que
+            me importas muchísimo y que de verdad lamento haberte
+            hecho sentir mal.
+        </p>
 
-            <h2>Para la persona que quiero muchísimo</h2>
+        <p class="mensaje">
+            Quiero mejorar y demostrarte con hechos que puedo
+            hacer las cosas mejor. 🥺❤️
+        </p>
 
-            <p>
-                Sé que tuvimos una pelea y que las cosas no salieron como
-                quería. He estado pensando en lo ocurrido y quiero pedirte
-                perdón.
-            </p>
+        <h2>¿Me perdonas?</h2>
 
-            <p>
-                No quiero que un momento de enojo haga olvidar todos los
-                momentos bonitos que hemos compartido.
-            </p>
+        <div class="botones">
 
-            <p>
-                Sé que quizá unas simples palabras no solucionen todo,
-                pero quiero que sepas que lo siento de corazón y que
-                realmente me importas.
-            </p>
+            <button class="perdon" onclick="responder('si')">
+                ❤️ Sí, te perdono
+            </button>
 
-            <p class="especial">
-                ❤️ No quiero ganar una discusión, quiero recuperar tu sonrisa. ❤️
-            </p>
-
-            <button id="boton">Tengo algo más que decirte 💌</button>
-
-            <div id="mensaje" class="mensaje oculto">
-                <h2>💖 Gracias por leerme 💖</h2>
-
-                <p>
-                    No espero que olvides lo que pasó de un momento a otro.
-                    Solo quería dar el primer paso y decirte que lo siento.
-                </p>
-
-                <p>
-                    Espero que podamos hablar tranquilos, escucharnos
-                    y arreglar las cosas juntos.
-                </p>
-
-                <p class="firma">
-                    Con cariño ❤️<br>
-                    <strong>Esneider</strong>
-                </p>
-            </div>
+            <button class="pensar" onclick="responder('pensarlo')">
+                🥺 Necesito pensarlo
+            </button>
 
         </div>
+
+        <p id="respuesta"></p>
 
     </main>
 
@@ -72,3 +56,4 @@
 
 </body>
 </html>
+```

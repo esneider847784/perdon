@@ -1,69 +1,36 @@
-const boton = document.getElementById("boton");
-const mensaje = document.getElementById("mensaje");
 
-boton.addEventListener("click", function () {
+// CAMBIA ESTE NÚMERO POR TU WHATSAPP
+const miNumero = "573009984175";
 
-    mensaje.classList.remove("oculto");
+function responder(opcion) {
 
-    boton.innerText = "❤️ Te quiero ❤️";
+    let mensaje = "";
 
-    crearCorazones(25);
-});
+    if (opcion === "si") {
 
+        mensaje = "Sí, te perdono ❤️";
 
-function crearCorazones(cantidad) {
+        document.getElementById("respuesta").textContent =
+            "Gracias por darme otra oportunidad ❤️";
 
-    const contenedor = document.querySelector(".corazones");
+    } else {
 
-    for (let i = 0; i < cantidad; i++) {
+        mensaje = "Necesito pensarlo 🥺";
 
-        const corazon = document.createElement("div");
-
-        corazon.classList.add("corazon-flotante");
-
-        corazon.innerHTML = "❤️";
-
-        corazon.style.left = Math.random() * 100 + "%";
-
-        corazon.style.fontSize =
-            (15 + Math.random() * 30) + "px";
-
-        corazon.style.animationDuration =
-            (4 + Math.random() * 4) + "s";
-
-        contenedor.appendChild(corazon);
-
-        setTimeout(() => {
-            corazon.remove();
-        }, 8000);
+        document.getElementById("respuesta").textContent =
+            "Lo entiendo. Tómate tu tiempo ❤️";
     }
+
+    // Crear el mensaje para WhatsApp
+    const mensajeCodificado = encodeURIComponent(mensaje);
+
+    const url =
+        "https://wa.me/" +
+        miNumero +
+        "?text=" +
+        mensajeCodificado;
+
+    // Abrir WhatsApp
+    window.open(url, "_blank");
 }
 
-
-// Corazones que aparecen automáticamente
-
-setInterval(() => {
-
-    const contenedor = document.querySelector(".corazones");
-
-    const corazon = document.createElement("div");
-
-    corazon.classList.add("corazon-flotante");
-
-    corazon.innerHTML = "💕";
-
-    corazon.style.left = Math.random() * 100 + "%";
-
-    corazon.style.fontSize =
-        (15 + Math.random() * 20) + "px";
-
-    corazon.style.animationDuration =
-        (5 + Math.random() * 4) + "s";
-
-    contenedor.appendChild(corazon);
-
-    setTimeout(() => {
-        corazon.remove();
-    }, 9000);
-
-}, 1000);
